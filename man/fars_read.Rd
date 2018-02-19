@@ -16,6 +16,6 @@ This function returns a data frame
 This function reads data in compressed .csv format and creates a data frame. It throws an error if the filename in the argument does not exist.
 }
 \examples{
-fars_read("Data.csv.bz2")
+\dontrun{fars_read("Data.csv.bz2")}
 
 }

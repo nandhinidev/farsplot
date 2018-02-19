@@ -1,11 +1,13 @@
 Package: farsplot
 Type: Package
+Depends:  R (>= 3.0.0)
 Title: FARS Data Analysis
 Version: 0.1.0
 Author: Nandhini Sokkalingam
 Maintainer: Nandhini Sokkalingam <nandhini.guhan@gmail.com>
-Description: This package uses data from the US National Highway Traffic Safety Administration's 'Fatality Analysis Reporting System' to aggregate and map fatal injuries suffered in motor vehicle traffic crashes    
+Description: This package uses data from the US National Highway Traffic Safety Administration's 'Fatality Analysis Reporting System' to aggregate and map fatal injuries suffered in motor vehicle traffic crashes.    
 License: GPL-2
+LazyData: true
 URL: https://github/nandhinidev/farsplot
 RoxygenNote: 6.0.1
 Suggests: knitr,

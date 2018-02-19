@@ -18,6 +18,6 @@ This returns a map with the accidents plotted for the state in the input
 This function plots the accidents for the state provided in the input on the map. The function throws an error if the state number in the input argument does not exist in the fars data.If there are no accidents reported for the state of interest, a message is displayed.
 }
 \examples{
-fars_map_state(3,2013)
+\dontrun{fars_map_state(3,2013)}
 
 }

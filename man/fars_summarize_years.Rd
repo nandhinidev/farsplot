@@ -16,6 +16,6 @@ This returns a data frame with each column for each year in the input argument a
 This function groups data by year and month and summarizes the total number of accidents for each year
 }
 \examples{
-fars_summarize_years(list(2013,2014,2015))
+\dontrun{fars_summarize_years(list(2013,2014,2015))}
 
 }

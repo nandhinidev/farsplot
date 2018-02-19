@@ -16,6 +16,6 @@ This function returns a list of data frames for each year in the input and none 
 This function creates a data list with the month and year columns for each year in the input
 }
 \examples{
-fars_read_years(list(2013,2014,2015))
+\dontrun{fars_read_years(list(2013,2014,2015))}
 
 }

@@ -16,6 +16,6 @@ This function returns a string with the year
 This function creates filenames with extensions with the year input
 }
 \examples{
-make_filename(2013)
+\dontrun{make_filename(2013)}
 
 }
