@@ -1,0 +1,54 @@
+---
+title: "FARS Data Analysis"
+author: "Nandhini Sokkalingam"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{FARS Data Analysis}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## FARS Data Analysis
+This package uses data from the US National Highway Traffic Safety Administration's 'Fatality Analysis Reporting System' to aggregate fatal injuries suffered in motor vehicle traffic crashes according to state and year and map that data.
+
+## Using the Package
+### Pulling data
+Data can be pulled from FARS using the function `fars_read_years` which will take a list of years as input (`years`). An example is shown below:
+```{r eval = FALSE}
+fars_read_years(years = list(2013,2014,2015))
+```
+
+### Aggregating and Mapping data
+The function `fars_summarize_years` groups the number of fatal injury accidents by year and reports the total number for each year while the function `fars_map_state` maps the total number of fatal accidents by state represented by a state number (`state.num`) and year (`year`). Here is an example of how to use the function `fars_summarize_years`:
+```{r eval = FALSE}
+fars_summarize_years(years = list(2013,2014,2015))
+```
+
+The function `fars_map_state` is used as shown in the following example:
+```{r eval = FALSE}
+fars_map_state(state.num = 3,year = 2013)
+```
+
+## Errors
+The function for pulling data `fars_read_years` and the function it calls `fars_read` will throw an error and warning respectively if there is no fars data available for a year as seen below:
+```{r eval = FALSE}
+Error in fars_read(filename = "accident_2019.csv.bz2") : file accident_2019.csv.bz2 does not exist
+
+Warning message:
+In fars_read_years(years = list(2015,2019)) : invalid year: 2019
+```
+
+You will encounter the following error when executing `fars_map_state` function if state number in the input argument does not exist in the fars data:
+```{r eval = FALSE}
+Error in fars_map_state(100,2013) : invalid STATE number: 100 
+```
+
+and a message if no accidents are reported for the state of interest as shown below:
+```{r eval = FALSE}
+no accidents to plot
+```
