@@ -1,4 +1,9 @@
-export("farsplot")
+export("fars_read")
+export("make_filename")
+export("fars_read_years")
+export("fars_summarize_years")
+export("fars_map_state")
+
 
 importFrom("readr", "read_csv")
 importFrom("dplyr", "tbl_df", "mutate", "select", "bind_rows", "group_by", "summarize", "filter")
